@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="css/bootswatch.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="css/overwrite.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script
+    src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script
+    src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="js/run.js">
+
+    </script>
+    <title>BigQuery schema generator</title>
+  </head>
+  <body>
+
+    <div class="navbar navbar-inverse">
+      <div class="navbar-collapse collapse navbar-inverse-collapse">
+        <form class="navbar-form navbar-left form-inline" action="javascript:void(0);">
+          <ul class="nav navbar-nav">
+            <li><h3>
+                Schema generator for BigQuery</h3>
+            </li>
+          </ul>
+        </form>
+      </div>
+      <!-- /.nav-collapse -->
+    </div>
+    <div class="row" id="rendering">
+      <div class="col-md-5">
+        <h2>source json </h2>
+        <textarea id="source">{"created_at": "2014-07-03 05:42:10","id": 484572789702004740,"id_str": "484572789702004738","text": "PowerShell Tools 2.1.7:support for EC2 T2 instances and support .. http://t.co/5KNPzKVXxu #awsuguk #aws #jawsug","source": "<a href=\"http://aws.amazon.com/releasenotes\" rel=\"nofollow\">AWSUpdate</a>","truncated": false,"in_reply_to_status_id": null,"in_reply_to_status_id_str": null,"in_reply_to_user_id": null,"in_reply_to_user_id_str": null,"in_reply_to_screen_name": null,"user": {"id": 746710903,"id_str": "746710903","name": "AWSUpdate","screen_name": "AWSUpdate","location": "","description": "I'm AWS unofficial Account.\r\n中の人は日本人です。\r\n\r\nreleasenote check & tweet.","url": "http://t.co/CiEUp5nCcN","entities": {"url": {"urls": [{"url": "http://t.co/CiEUp5nCcN","expanded_url": "http://aws.amazon.com/releasenotes/","display_url": "aws.amazon.com/releasenotes/","indices": [0,22]}]},"description": {"urls": []}},"protected": false,"followers_count": 535,"friends_count": 639,"listed_count": 24,"created_at": "Thu Aug 09 06:47:56 +0000 2012","favourites_count": 1,"utc_offset": -25200,"time_zone": "Pacific Time (US & Canada)","geo_enabled": false,"verified": false,"statuses_count": 800,"lang": "en","contributors_enabled": false,"is_translator": false,"is_translation_enabled": false,"profile_background_color": "C0DEED","profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png","profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png","profile_background_tile": false,"profile_image_url": "http://pbs.twimg.com/profile_images/2535085904/0txyzhf9n7o03wmtodx7_normal.png","profile_image_url_https": "https://pbs.twimg.com/profile_images/2535085904/0txyzhf9n7o03wmtodx7_normal.png","profile_link_color": "0084B4","profile_sidebar_border_color": "C0DEED","profile_sidebar_fill_color": "DDEEF6","profile_text_color": "333333","profile_use_background_image": true,"default_profile": true,"default_profile_image": false,"following": false,"follow_request_sent": false,"notifications": false},"geo": null,"coordinates": null,"place": null,"contributors": null,"retweet_count": 2,"favorite_count": 0,"entities": {"hashtags": [{"text": "awsuguk","indices": [90,98]},{"text": "aws","indices": [99,103]},{"text": "jawsug","indices": [104,111]}],"symbols": [],"urls": [{"url": "http://t.co/5KNPzKVXxu","expanded_url": "http://aws.amazon.com/releasenotes/2220833554771203","display_url": "aws.amazon.com/releasenotes/2…","indices": [67,89]}],"user_mentions": []},"favorited": false,"retweeted": false,"possibly_sensitive": false,"lang": "en"}</textarea>
+      </div>
+      <div class="col-md-1">
+        <div>
+          <button class="btn btn-success" id="generate">generate</button>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h2>generated schema json</h2>
+        <textarea id="schema" class="well"></textarea>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,35 @@
+.bs-header .container {
+  position: relative;
+}
+
+html,body {
+  height: 100%;
+}
+
+
+div.col-md-1>*,div.col-md-6>textarea,div.col-md-5>textarea{
+  height:90%;
+  width: 85%;
+  margin-left: 6%;
+  margin-right: 6%;
+}
+
+div.col-md-1>* {
+  line-height: 100%;
+  vertical-align: middle;
+  padding-top: 40%;
+
+}
+#url {
+  min-width: 400px;
+}
+
+#rendering {
+  position: static;
+  height: 95%;
+  top: 0px;
+}
+
+#rendering>div {
+  height: 100%;
+}
